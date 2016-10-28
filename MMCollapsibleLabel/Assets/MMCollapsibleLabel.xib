@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MMCollapsibleLabel">
+            <connections>
+                <outlet property="button" destination="3XW-5R-frX" id="uWh-nY-7s8"/>
+                <outlet property="buttonContainerZeroHightConstraint" destination="oL0-i0-szr" id="kqp-g7-Y25"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="UKr-YC-7Pl"/>
+                <outlet property="label" destination="xGN-l0-fNw" id="uhg-NQ-DSf"/>
+                <outlet property="labelBottomMarginConstraint" destination="lLL-0L-XUE" id="ydX-cx-wvl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cG5-QB-bAj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGN-l0-fNw">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xGN-l0-fNw" firstAttribute="leading" secondItem="cG5-QB-bAj" secondAttribute="leading" id="8Uc-6t-Pbz"/>
+                        <constraint firstItem="xGN-l0-fNw" firstAttribute="top" secondItem="cG5-QB-bAj" secondAttribute="top" id="Hbe-db-Ksz"/>
+                        <constraint firstAttribute="bottom" secondItem="xGN-l0-fNw" secondAttribute="bottom" id="lLL-0L-XUE"/>
+                        <constraint firstAttribute="trailing" secondItem="xGN-l0-fNw" secondAttribute="trailing" id="rsF-of-bjM"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a94-h7-boz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XW-5R-frX">
+                            <rect key="frame" x="144" y="0.0" width="32" height="30"/>
+                            <state key="normal" title="Hide"/>
+                            <connections>
+                                <action selector="buttonDidPush:" destination="-1" eventType="touchUpInside" id="A3B-32-A2s"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="3XW-5R-frX" secondAttribute="bottom" id="5I6-FM-LPo"/>
+                        <constraint firstItem="3XW-5R-frX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a94-h7-boz" secondAttribute="leading" id="7Ha-Ol-1JQ"/>
+                        <constraint firstItem="3XW-5R-frX" firstAttribute="top" secondItem="a94-h7-boz" secondAttribute="top" id="DF2-d7-ZKJ"/>
+                        <constraint firstAttribute="height" id="oL0-i0-szr"/>
+                        <constraint firstItem="3XW-5R-frX" firstAttribute="centerX" secondItem="a94-h7-boz" secondAttribute="centerX" id="qk7-n1-blB"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3XW-5R-frX" secondAttribute="trailing" id="zk3-KK-D3x"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="oL0-i0-szr"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="a94-h7-boz" firstAttribute="top" secondItem="cG5-QB-bAj" secondAttribute="bottom" id="7Fc-cY-TVq"/>
+                <constraint firstAttribute="trailing" secondItem="cG5-QB-bAj" secondAttribute="trailing" id="LOW-J4-lQb"/>
+                <constraint firstAttribute="trailing" secondItem="a94-h7-boz" secondAttribute="trailing" id="PUB-Kp-oug"/>
+                <constraint firstItem="a94-h7-boz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="U65-cN-uYB"/>
+                <constraint firstItem="cG5-QB-bAj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dZQ-XB-ktK"/>
+                <constraint firstAttribute="bottom" secondItem="a94-h7-boz" secondAttribute="bottom" id="ldh-Rb-MVY"/>
+                <constraint firstItem="cG5-QB-bAj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nYA-Io-bKJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="143" y="296"/>
+        </view>
+    </objects>
+</document>

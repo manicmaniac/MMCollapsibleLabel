@@ -1,0 +1,7 @@
+target 'MMCollapsibleLabel_Example' do
+  pod 'MMCollapsibleLabel', :path => '../'
+
+  target 'MMCollapsibleLabel_Tests' do
+    inherit! :search_paths
+  end
+end

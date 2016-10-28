@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wQg-tq-qST">
+            <objects>
+                <viewController id="whP-gf-Uak" customClass="MMViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4X-7Q-yaU" customClass="MMCollapsibleLabel">
+                                <rect key="frame" x="20" y="28" width="560" height="193"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text">
+                                        <mutableString key="value">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rMc-ZO-37H">
+                                <rect key="frame" x="20" y="562" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChangeValue:" destination="whP-gf-Uak" eventType="editingChanged" id="rdE-Or-48W"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numberOfLines:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDb-PX-x7b">
+                                <rect key="frame" x="20" y="533" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-za-920">
+                                <rect key="frame" x="151" y="533" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="n4d-3i-GqY">
+                                <rect key="frame" x="167" y="529" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperDidChangeValue:" destination="whP-gf-Uak" eventType="valueChanged" id="6Yp-ms-S85"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c4X-7Q-yaU" firstAttribute="trailing" secondItem="TpU-gO-2f1" secondAttribute="trailingMargin" id="25b-gS-C6o"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="rMc-ZO-37H" secondAttribute="bottom" constant="8" id="2T9-Yc-bNI"/>
+                            <constraint firstItem="rMc-ZO-37H" firstAttribute="top" secondItem="wDb-PX-x7b" secondAttribute="bottom" constant="8" id="7Gl-H7-ush"/>
+                            <constraint firstItem="c4X-7Q-yaU" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="8" id="90I-El-dPS"/>
+                            <constraint firstItem="rMc-ZO-37H" firstAttribute="top" secondItem="pdc-za-920" secondAttribute="bottom" constant="8" id="Cyb-HR-L1t"/>
+                            <constraint firstItem="n4d-3i-GqY" firstAttribute="leading" secondItem="pdc-za-920" secondAttribute="trailing" constant="8" id="IKE-2h-hfb"/>
+                            <constraint firstItem="rMc-ZO-37H" firstAttribute="trailing" secondItem="TpU-gO-2f1" secondAttribute="trailingMargin" id="O7a-f8-MhA"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wDb-PX-x7b" secondAttribute="leading" id="YtP-IO-7Vv"/>
+                            <constraint firstItem="rMc-ZO-37H" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" id="p5G-qR-ZYJ"/>
+                            <constraint firstItem="c4X-7Q-yaU" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" id="pEa-w3-sEj"/>
+                            <constraint firstItem="pdc-za-920" firstAttribute="leading" secondItem="wDb-PX-x7b" secondAttribute="trailing" constant="8" id="sfn-1Z-kkD"/>
+                            <constraint firstItem="n4d-3i-GqY" firstAttribute="centerY" secondItem="pdc-za-920" secondAttribute="centerY" id="uOQ-ra-K2E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="c4X-7Q-yaU" id="xgp-8L-vIT"/>
+                        <outlet property="numberOfLinesLabel" destination="pdc-za-920" id="Qds-8o-406"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="433"/>
+        </scene>
+    </scenes>
+</document>

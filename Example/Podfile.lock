@@ -1,0 +1,16 @@
+PODS:
+  - MMCollapsibleLabel (0.1.0)
+
+DEPENDENCIES:
+  - MMCollapsibleLabel (from `../`)
+
+EXTERNAL SOURCES:
+  MMCollapsibleLabel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MMCollapsibleLabel: 047df508cf027d40bc8df5e5cec679bb5b13de74
+
+PODFILE CHECKSUM: 0acc4b83162db8c7afab86d854697fd0859f3dbc
+
+COCOAPODS: 1.1.1
