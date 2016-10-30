@@ -290,7 +290,7 @@
 - (void)setCollapsed:(BOOL)collapsed animated:(BOOL)animated {
     if (_collapsed != collapsed) {
         _collapsed = collapsed;
-        if (animated) {
+        if (animated && (_animationDuration > 0)) {
             __block NSLayoutConstraint *labelBottomMarginConstraint = _labelBottomMarginConstraint;
             labelBottomMarginConstraint.active = NO;
             [self updateSubviews];
