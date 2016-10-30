@@ -31,11 +31,12 @@
 }
 
 - (void)setText:(NSString *)text {
-    if (_label.text != text) {
+    _label.text = text;
+    if (_label.text == text) {
         _label.text = text;
-        [self setNeedsUpdateConstraints];
     } else {
         _label.text = text;
+        [self setNeedsUpdateConstraints];
     }
 }
 
@@ -92,7 +93,12 @@
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText {
-    _label.attributedText = attributedText;
+    if (_label.attributedText == attributedText) {
+        _label.attributedText = attributedText;
+    } else {
+        _label.attributedText = attributedText;
+        [self setNeedsUpdateConstraints];
+    }
 }
 
 - (UIColor *)highlightedTextColor {
@@ -124,8 +130,6 @@
         _numberOfLines = numberOfLines;
         [self setNeedsUpdateConstraints];
         [self setNeedsLayout];
-    } else {
-        _numberOfLines = numberOfLines;
     }
 }
 
