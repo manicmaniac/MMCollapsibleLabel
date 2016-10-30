@@ -31,10 +31,7 @@
 }
 
 - (void)setText:(NSString *)text {
-    _label.text = text;
-    if (_label.text == text) {
-        _label.text = text;
-    } else {
+    if (_label.text != text) {
         _label.text = text;
         [self setNeedsUpdateConstraints];
     }
@@ -93,9 +90,7 @@
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText {
-    if (_label.attributedText == attributedText) {
-        _label.attributedText = attributedText;
-    } else {
+    if (_label.attributedText != attributedText) {
         _label.attributedText = attributedText;
         [self setNeedsUpdateConstraints];
     }
