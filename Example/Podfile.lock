@@ -1,7 +1,9 @@
 PODS:
+  - FBSnapshotTestCase/Core (2.1.4)
   - MMCollapsibleLabel (0.1.0)
 
 DEPENDENCIES:
+  - FBSnapshotTestCase/Core
   - MMCollapsibleLabel (from `../`)
 
 EXTERNAL SOURCES:
@@ -9,8 +11,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MMCollapsibleLabel: 047df508cf027d40bc8df5e5cec679bb5b13de74
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  MMCollapsibleLabel: 839f643031fa4ff9007afa06f8565b2ce436f5d5
 
-PODFILE CHECKSUM: 0acc4b83162db8c7afab86d854697fd0859f3dbc
+PODFILE CHECKSUM: 402237af966e35f514f8e78d8732a2eda59caffe
 
 COCOAPODS: 1.1.1

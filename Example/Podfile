@@ -3,5 +3,7 @@ target 'MMCollapsibleLabel_Example' do
 
   target 'MMCollapsibleLabel_Tests' do
     inherit! :search_paths
+
+    pod 'FBSnapshotTestCase/Core'
   end
 end
