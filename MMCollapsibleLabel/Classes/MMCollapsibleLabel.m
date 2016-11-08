@@ -363,6 +363,9 @@
     toLabel.adjustsFontSizeToFitWidth = fromLabel.adjustsFontSizeToFitWidth;
     toLabel.baselineAdjustment = fromLabel.baselineAdjustment;
     toLabel.minimumScaleFactor = fromLabel.minimumScaleFactor;
+#ifndef NSFoundationVersionNumber_iOS_8_4
+    double NSFoundationVersionNumber_iOS_8_4 = 1144.17;
+#endif
     if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_8_4) {
         toLabel.allowsDefaultTighteningForTruncation = fromLabel.allowsDefaultTighteningForTruncation;
     }
