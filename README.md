@@ -1,6 +1,6 @@
 # MMCollapsibleLabel
 
-[![CI Status](http://img.shields.io/travis/manicmaniac/MMCollapsibleLabel.svg?style=flat)](https://travis-ci.org/Ryosuke Ito/MMCollapsibleLabel)
+[![CI Status](http://img.shields.io/travis/manicmaniac/MMCollapsibleLabel.svg?style=flat)](https://travis-ci.org/manicmaniac/MMCollapsibleLabel)
 [![Version](https://img.shields.io/cocoapods/v/MMCollapsibleLabel.svg?style=flat)](http://cocoapods.org/pods/MMCollapsibleLabel)
 [![License](https://img.shields.io/cocoapods/l/MMCollapsibleLabel.svg?style=flat)](http://cocoapods.org/pods/MMCollapsibleLabel)
 [![Platform](https://img.shields.io/cocoapods/p/MMCollapsibleLabel.svg?style=flat)](http://cocoapods.org/pods/MMCollapsibleLabel)
