@@ -10,6 +10,10 @@
 #import <FBSnapshotTestCase/FBSnapshotTestCase.h>
 #import <MMCollapsibleLabel/MMCollapsibleLabel.h>
 
+#ifndef NSFoundationVersionNumber_iOS_9_x_Max
+#define NSFoundationVersionNumber_iOS_9_x_Max 1299
+#endif
+
 @interface MMCollapsibleLabelSnapshotTests : FBSnapshotTestCase
 
 @end
@@ -35,12 +39,20 @@
 
 - (void)testWithLoremIpsumWithCollapsed {
     [_collapsibleLabel setCollapsed:YES animated:false];
-    FBSnapshotVerifyView(_collapsibleLabel, nil);
+    CGFloat tolerance = 0;
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_9_x_Max) {
+        tolerance = 0.0126;
+    }
+    FBSnapshotVerifyViewWithOptions(_collapsibleLabel, nil, FBSnapshotTestCaseDefaultSuffixes(), tolerance);
 }
 
 - (void)testWithLoremIpsumWithNotCollapsed {
     [_collapsibleLabel setCollapsed:NO animated:false];
-    FBSnapshotVerifyView(_collapsibleLabel, nil);
+    CGFloat tolerance = 0;
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_9_x_Max) {
+        tolerance = 0.0877;
+    }
+    FBSnapshotVerifyViewWithOptions(_collapsibleLabel, nil, FBSnapshotTestCaseDefaultSuffixes(), tolerance);
 }
 
 @end
