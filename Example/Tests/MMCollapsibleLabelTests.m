@@ -226,7 +226,15 @@ test:
     XCTAssertTrue(_label.isCollapsed);
 }
 
-- (void)testShowButtonTitle {
+- (void)testShowButtonTitleWhenCollapsed {
+    _label.collapsed = YES;
+    XCTAssertEqualObjects(_label.showButtonTitle, @"Show");
+    _label.showButtonTitle = @"Foo";
+    XCTAssertEqualObjects(_label.showButtonTitle, @"Foo");
+}
+
+- (void)testShowButtonTitleWhenNotCollapsed {
+    _label.collapsed = NO;
     XCTAssertEqualObjects(_label.showButtonTitle, @"Show");
     _label.showButtonTitle = @"Foo";
     XCTAssertEqualObjects(_label.showButtonTitle, @"Foo");
@@ -242,6 +250,22 @@ test:
     XCTAssertEqualWithAccuracy(_label.animationDuration, 0.25, 0.000001);
     _label.animationDuration = 1.0;
     XCTAssertEqualWithAccuracy(_label.animationDuration, 1.0, 0.000001);
+}
+
+- (void)testButtonDidPushWhenCollapsed {
+    _label.collapsed = YES;
+    UIButton *button = [self findButton];
+    XCTAssertNotNil(button);
+    [button sendActionsForControlEvents:UIControlEventTouchUpInside];
+    XCTAssertFalse(_label.collapsed);
+}
+
+- (void)testButtonDidPushWhenNotCollapsed {
+    _label.collapsed = NO;
+    UIButton *button = [self findButton];
+    XCTAssertNotNil(button);
+    [button sendActionsForControlEvents:UIControlEventTouchUpInside];
+    XCTAssertTrue(_label.collapsed);
 }
 
 #pragma mark -
@@ -261,6 +285,22 @@ test:
         NSNumber *calledCount = calledCounts[@"testKeyValueObserving"];
         calledCounts[@"testKeyValueObserving"] = @(calledCount.integerValue + 1);
     }
+}
+
+#pragma mark - @private
+
+- (UIButton *)findButton {
+    UIView *contentView = _label.subviews.firstObject;
+    UIButton *button = nil;
+    for (UIView *view in contentView.subviews) {
+        for (UIView *subview in view.subviews) {
+            if ([subview isKindOfClass:[UIButton class]]) {
+                button = (UIButton *)subview;
+                break;
+            }
+        }
+    }
+    return button;
 }
 
 @end
