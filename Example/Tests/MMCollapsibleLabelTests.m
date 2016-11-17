@@ -23,7 +23,7 @@
 - (void)setUp {
     [super setUp];
     _label = [[MMCollapsibleLabel alloc] init];
-    _defaultTintColor = [UIColor colorWithRed:0.0 green:122.0 / 255.0 blue: 255.0 alpha:1.0];
+    _defaultTintColor = [UIColor colorWithRed:0.0 green:122.0 / 255.0 blue: 255.0 / 255.0 alpha:1.0];
 }
 
 #pragma mark -
