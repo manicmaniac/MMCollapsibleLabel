@@ -20,6 +20,7 @@ A highly customizable UILabel which is collapsible like an accordion with a Show
   s.author           = { 'Ryosuke Ito' => 'rito.0305@gmail.com' }
   s.screenshot       = 'https://media.giphy.com/media/3oriOcw7Dx16LgUkq4/source.gif'
   s.source           = { :git => 'https://github.com/manicmaniac/MMCollapsibleLabel.git', :tag => s.version.to_s }
+  s.deprecated       = true
 
   s.ios.deployment_target = '7.0'
 

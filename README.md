@@ -7,6 +7,8 @@
 
 A highly customizable UILabel which is collapsible like an accordion with a Show / Hide button.
 
+**:warning: This library is no longer maintained.**
+
 ![Screenshot](https://media.giphy.com/media/3oriOcw7Dx16LgUkq4/source.gif)
 
 ## Example
