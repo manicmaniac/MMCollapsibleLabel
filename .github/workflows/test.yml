@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: bundle exec pod install --project-directory=Example
       - name: Run test
-        run: set -o pipefail && xcodebuild test -workspace Example/MMCollapsibleLabel.xcworkspace -scheme MMCollapsibleLabel -Example -sdk iphonesimulator | xcpretty
+        run: set -o pipefail && xcodebuild test -workspace Example/MMCollapsibleLabel.xcworkspace -scheme MMCollapsibleLabel-Example -sdk iphonesimulator | xcpretty
   lint:
     runs-on: macOS-12
     steps:
