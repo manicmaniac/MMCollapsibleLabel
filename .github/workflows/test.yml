@@ -1,0 +1,29 @@
+name: Test
+on: [push]
+env:
+  DEVELOPER_DIR: "/Applications/Xcode_13.4.1.app/Contents/Developer"
+jobs:
+  unit-test:
+    runs-on: macOS-12
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+          bundler-cache: true
+      - name: Install dependencies
+        run: bundle exec pod install --project-directory=Example
+      - name: Run test
+        run: set -o pipefail && xcodebuild test -workspace Example/MMCollapsibleLabel.xcworkspace -scheme MMCollapsibleLabel -Example -sdk iphonesimulator | xcpretty
+  lint:
+    runs-on: macOS-12
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+          bundler-cache: true
+      - name: Install dependencies
+        run: bundle exec pod install --project-directory=Example
+      - name: Run lint
+        run: bundle exec pod lib lint
